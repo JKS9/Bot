@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BOT</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+        <script type="text/javascript">
+            function clic() {
+                const setting = document.getElementById('setting');
+                const iconeMenu = document.getElementById('iconeMenu');
+                setting.classList.add("setting_clic");
+                iconeMenu.setAttribute("onclick", "removeclick()");
+            }
+            function removeclick() {
+                const setting = document.getElementById('setting');
+                const iconeMenu = document.getElementById('iconeMenu');
+                setting.classList.remove("setting_clic");
+                iconeMenu.setAttribute("onclick", "clic()");
+            }
+        </script>
+    </head>
+    <body id="body">
+        <div id="app">
+            <div id="title_bot"></div>
+        </div>
+        <div class="container">
+            <div class="Editpadding">
+                <div id="litleMenu">
+                    <span id="iconeMenu" onclick="clic()">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </span>
+                </div>
+                <div id="setting">
+                    <div class="triangle"></div>
+                    <div class="rectangle">
+                        <p>Mode sombre</p>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column is-3 noPaddingRight">
+                    <div class="content scrollNav">
+                        <ul id="botPicture">
+                           <li>
+                                <figure class="image is-48x48">
+                                    <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png">
+                                </figure>
+                                <p>Michel Smith</p>
+                           </li>
+                           <li>
+                                <figure class="image is-48x48">
+                                    <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png">
+                                </figure>
+                                <p>Jacky Smith</p>
+                           </li>
+                           <li>
+                                <figure class="image is-48x48">
+                                    <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png">
+                                </figure>
+                                <p>Méteo France</p>
+                            </li>
+                            <li>
+                                <figure class="image is-48x48">
+                                    <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png">
+                                </figure>
+                                <p>France Inter</p>
+                            </li>
+                            <li>
+                                <figure class="image is-48x48">
+                                    <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png">
+                                </figure>
+                                <p>Programme TV</p>
+                            </li>
+                        </ul>
+                     </div>
+                </div>
+                <div class="column is-9 noPaddingLeft">
+                    <div class="backgroundCol">
+                        <div id="blockMessage">
+                            <div class="Memessage">
+                                <figure class="image is-48x48">
+                                    <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png">
+                                </figure>
+                                <p class="nameMe">Me</p>
+                                <p class="textMe">la météo sur Paris cette après midi ?</p>
+                                <p class="Infomessage">08/11/2019 & 13H55</p>
+                            </div>
+                            <div class="Botmessage">
+                                <figure class="image is-48x48">
+                                    <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png">
+                                </figure>
+                                <p class="namebot">Michel Smith</p>
+                                <p class="textBot">Il fera 5° sur paris dans l'après midi</p>
+                                <p class="Infomessage">08/11/2019 & 13H56</p>
+
+                            </div>
+                            <div class="Memessage">
+                                <figure class="image is-48x48">
+                                    <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png">
+                                </figure>
+                                <p class="nameMe">Me</p>
+                                <p class="textMe">Merci :)</p>
+                                <p class="Infomessage">08/11/2019 & 13H56</p>
+                            </div>
+                            <div class="Botmessage">
+                                <figure class="image is-48x48">
+                                    <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png">
+                                </figure>
+                                <p class="namebot">Michel Smith</p>
+                                <p class="textBot">N'hésite pas à me recontacter ;)</p>
+                                <p class="Infomessage">08/11/2019 & 13H57</p>
+                            </div>
+                            <div class="Memessage">
+                                <figure class="image is-48x48">
+                                    <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png">
+                                </figure>
+                                <p class="nameMe">Me</p>
+                                <p class="textMe">Merci :)</p>
+                                <p class="Infomessage">08/11/2019 & 13H56</p>
+                            </div>
+                            <div class="Botmessage">
+                                <figure class="image is-48x48">
+                                    <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png">
+                                </figure>
+                                <p class="namebot">Michel Smith</p>
+                                <p class="textBot">N'hésite pas à me recontacter ;)</p>
+                                <p class="Infomessage">08/11/2019 & 13H57</p>
+                            </div>
+                            <div class="Memessage">
+                                <figure class="image is-48x48">
+                                    <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png">
+                                </figure>
+                                <p class="nameMe">Me</p>
+                                <p class="textMe">Merci :)</p>
+                                <p class="Infomessage">08/11/2019 & 13H56</p>
+                            </div>
+                            <div class="Botmessage">
+                                <figure class="image is-48x48">
+                                    <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png">
+                                </figure>
+                                <p class="namebot">Michel Smith</p>
+                                <p class="textBot">N'hésite pas à me recontacter ;)</p>
+                                <p class="Infomessage">08/11/2019 & 13H57</p>
+                            </div>
+                        </div>
+                        <div id="formBot">
+                            <div class=bar></div>
+                            <div class="field is-grouped">
+                                <p class="control is-expanded">
+                                    <input class="input" type="text" placeholder="Send message">
+                                </p>
+                                <p class="control">
+                                        <button class="button is-black">Send</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+    objDiv = document.getElementById("divExample");
+    objDiv.scrollTop = objDiv.scrollHeight;
+    </script>
+</html>

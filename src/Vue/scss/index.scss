@@ -1,0 +1,273 @@
+// variable color and background
+$colorWhite: #fff;
+$colorBlack: #000;
+$colorHover: #eaeaea;
+$colorBody : #2b8a80;
+
+// variable fonts
+$fontJosefin : 'Josefin Sans', sans-serif;
+
+
+@mixin TextColor($color) {
+    color: $color;
+}
+
+body {
+    background-color: $colorBody;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+#title_bot {
+  > h1 {
+    padding: 10px 0px 0px 0px;
+    font-family: $fontJosefin;
+    @include TextColor($colorWhite);
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+  }
+}
+.noPaddingRight {
+  padding: .75em 0em .75em .75em;
+}
+.scrollNav {
+  overflow: scroll;
+  height: 495px;
+}
+#botPicture {
+  list-style: none;
+  margin: 0px;
+  > li {
+    height: 58px;
+    padding: 5px 0px 5px 5px;
+    background-color: $colorWhite;
+    border-radius: 5px;
+    > figure {
+      float: left;
+      margin:0px;
+    }
+    > p {
+      float: left;
+      line-height: 48px;
+      width: 220px;
+      padding-left: 10px;
+      font-family: $fontJosefin;
+      @include TextColor($colorBlack);
+    }
+  }
+  > li:hover {
+    background-color: $colorHover;
+  }
+}
+.Editpadding {
+  width: 100%;
+  padding: .75em 0em .5em 0em;
+  #litleMenu {
+    height: 58px;
+    background-color: $colorWhite;
+    border-radius: 5px;
+    padding: 5px 0px;
+  }
+  #iconeMenu {
+    font-size: 2em;
+    color: $colorBlack;
+    float: right;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  #iconeMenu:hover {
+    color: $colorBody;
+  }
+  #setting{
+    display:none;
+  }
+  .setting_clic{
+    display:block !important;
+  }
+
+  .triangle {
+    width: 0;
+    height: 0;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-bottom: 30px solid #56b9ae;
+    position: absolute;
+    right: 18px;
+    top: 50px;
+  }
+  .rectangle {
+    width: 230px;
+    height: 54px;
+    position: absolute;
+    right: 10px;
+    background:#56b9ae;
+    top: 70px;
+    z-index: 9;
+    > p {
+      position: absolute;
+      line-height: 56px;
+      width: 150px;
+      text-align: center;
+      margin-left: 5px;
+      color: $colorWhite;
+      font-weight: bold;
+      font-family: $fontJosefin;
+    }
+    .switch {
+      position: absolute;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+      right: 10px;
+      top: 10px;
+    }
+    .switch input { 
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $colorWhite;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: $colorBody;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+    input:checked + .slider {
+      background-color: $colorBlack;
+    }
+    input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+    .slider.round {
+      border-radius: 34px;
+    }
+    .slider.round:before {
+      border-radius: 50%;
+    }
+  }
+}
+.noPaddingLeft {
+  padding: .75em .75em .75em .75em;
+  .backgroundCol {
+    width: 100%;
+    background-color: $colorWhite;
+    height: 41em;
+    border-radius: 5px;
+  }
+}
+#blockMessage {
+  height: 580px;
+  overflow: scroll;
+  .Memessage {
+    width: 65%;
+    float: right;
+    margin-right: 15px;
+    margin-top: 4px;
+    > figure {
+      float: right;
+    }
+    .nameMe {
+      float: right;
+      line-height: 48px;
+      width: 150px;
+      padding-right: 10px;
+      font-family: "Josefin Sans", sans-serif;
+      color:$colorBlack;
+      text-align: right;
+    }
+    .textMe {
+      float: right;
+      width: 85%;
+      padding-right: 51px;
+      font-family: "Josefin Sans", sans-serif;
+      color: $colorBlack;
+      text-align: justify;
+      font-size: 1.1em;
+      background:$colorBody;
+      padding: 5px 15px;
+      border-radius: 4px;
+      color:$colorWhite;
+      margin-top: 5px;
+    }
+    .Infomessage {
+      float: right;
+      width: 100%;
+      padding-right: 10px;
+      font-family: "Josefin Sans", sans-serif;
+      color:$colorBlack;
+      text-align: right;
+      font-size: .7em;
+    }
+  }
+  .Botmessage {
+    width: 70%;
+    float: left;
+    margin-left: 15px;
+    margin-top: 4px;
+    > figure {
+      float: left;
+    }
+    .namebot {
+      float: left;
+      line-height: 48px;
+      width: 150px;
+      padding-left: 10px;
+      font-family: "Josefin Sans", sans-serif;
+      color:$colorBlack;
+      text-align: left;
+    }
+    .textBot {
+      float: left;
+      width: 85%;
+      padding-right: 51px;
+      font-family: "Josefin Sans", sans-serif;
+      color: $colorBlack;
+      text-align: justify;
+      font-size: 1.1em;
+      background: $colorHover;
+      padding: 5px 15px;
+      border-radius: 4px;
+      margin-top: 5px;
+    }
+    .Infomessage {
+      float: left;
+      width: 100%;
+      padding-right: 10px;
+      font-family: "Josefin Sans", sans-serif;
+      color:$colorBlack;
+      text-align: left;
+      font-size: .7em;
+    }
+  }
+}
+#formBot {
+  .bar {
+    padding: 3px 0px;
+    background: $colorBody;
+  }
+  .field {
+    width: 90%;
+    margin: 15px auto 10px auto;
+  }
+}
+
