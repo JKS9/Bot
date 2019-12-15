@@ -15,7 +15,12 @@ class Chat {
       for (let j = 0; j < objectCmd.actions[i].command.keyword.length; j += 1) {
         if (msg === objectCmd.actions[i].command.keyword[j]) {
           if (objectCmd.actions[i].command.response.type === 'function') {
-            isExist = f.default.function.date();
+            if (objectCmd.actions[i].command.response.value === 'checkMeteo') {
+              isExist = f.default.function.meteo();
+            }
+            if (objectCmd.actions[i].command.response.value === 'checkDate') {
+              isExist = f.default.function.date();
+            }
           }
           if (objectCmd.actions[i].command.response.type === 'text') {
             isExist = objectCmd.actions[i].command.response.value;
@@ -24,6 +29,7 @@ class Chat {
       }
     }
 
+    console.log(isExist);
     return isExist;
   }
 }
