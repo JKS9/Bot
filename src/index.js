@@ -5,5 +5,4 @@ import Bot from '../static/json-mock/bot/bot_command_fr.json';
 
 const chat = new Chat(MyConstants.user, Bot);
 
-// convertir le message en minuscule
-chat.isBotCommandExist('DATddE');
+chat.isBotCommandExist('meteo paris');
