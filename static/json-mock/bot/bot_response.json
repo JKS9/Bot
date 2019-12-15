@@ -1,7 +1,18 @@
 {
-    "id": {},
-    "name": {},
-    "version": {},
-    "description": {},
-    "actions": {}
+    "bot1" : [
+        {
+            "date": "01:09:2019 12:05:35",
+            "actions": {
+            "message": "salut",
+            "reponse": "salut; ça va !"
+            }
+        },
+        {
+            "date": "01:09:2019 12:05:35",
+            "actions": {
+            "message": "salut",
+            "reponse": "salut; ça va !"
+            }
+        }
+    ]
 }
