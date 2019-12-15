@@ -1,6 +1,9 @@
 import './styles/sass/index.scss';
+import * as MyConstants from '../static/constants';
+import Chat from './script/Chat';
+import Bot from '../static/json-mock/bot/bot_command_fr.json';
 
-const Grille = require('./script/Title');
+const chat = new Chat(MyConstants.user, Bot);
 
-const grille = new Grille();
-grille.title('My questions, My bot');
+// convertir le message en minuscule
+chat.isBotCommandExist('DATddE');
