@@ -5,4 +5,4 @@ import Bot from '../static/json-mock/bot/bot_command_fr.json';
 
 const chat = new Chat(MyConstants.user, Bot);
 
-chat.isBotCommandExist('meteo');
+chat.isBotCommandExist('meteo paris');
