@@ -8,7 +8,7 @@ export default {
     },
     date: () => {
       const date = new Date();
-      return `${date} & ${date.toLocaleTimeString()}`;
+      return date.toLocaleTimeString();
     },
   },
 };
