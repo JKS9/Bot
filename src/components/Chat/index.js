@@ -1,4 +1,7 @@
-import * as f from '../../static/json-mock/bot/bot_command_function';
+import f from '../../../static/json-mock/bot/bot_command_function';
+import tplContact from './views';
+import tplBot from '../Bot/views';
+
 
 class Chat {
   constructor(user, bot) {
@@ -14,7 +17,7 @@ class Chat {
 
     if (msg.match(regexMeteo)) {
       const secondParameter = msg.split(' ')[1];
-      isExist = f.default.function.meteo(secondParameter);
+      isExist = f.function.meteo(secondParameter);
     }
 
     for (let i = 0; i < objectCmd.actions.length; i += 1) {
@@ -32,7 +35,32 @@ class Chat {
       }
     }
 
+    this.renderBot(isExist);
     return isExist;
+  }
+
+  renderMe() {
+    const elContacts = document.querySelector('#blockMessage');
+    const item = {
+      name: 'Me',
+      avatar: 'https://bulma.io/images/placeholders/96x96.png',
+      msg: 'truuuc',
+      date: f.function.date(),
+    };
+
+    elContacts.innerHTML += tplContact(item);
+  }
+
+  renderBot(message) {
+    const elContacts = document.querySelector('#blockMessage');
+    const item = {
+      name: 'bot1',
+      avatar: 'https://bulma.io/images/placeholders/96x96.png',
+      msg: message,
+      date: f.function.date(),
+    };
+
+    elContacts.innerHTML += tplBot(item);
   }
 }
 

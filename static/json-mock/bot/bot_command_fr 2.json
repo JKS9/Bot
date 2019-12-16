@@ -1,0 +1,51 @@
+{
+  "bot1": {
+    "actions": [
+      {
+        "command": {
+          "keyword": ["salut", "bonjour","slt","lu","bjr"],
+          "response": {
+            "type": "text",
+            "value": "salut, ça va !"
+          }
+        }
+      },
+      {
+        "command": {
+          "keyword": ["au revoir", "bye", "A bientot"],
+          "response": {
+            "type": "text",
+            "value": "A bientot"
+          }
+        }
+      },
+      {
+        "command": {
+          "keyword": ["date", "donne moi la date"],
+          "response": {
+            "type": "function",
+            "value": "checkDate"
+          }
+        }
+      },
+      {
+        "command": {
+          "keyword": ["meteo", "donne moi le meteo"],
+          "response": {
+            "type": "function",
+            "value": "checkMeteo"
+          }
+        }
+      },
+      {
+        "command": {
+          "keyword": ["help", "aide moi"],
+          "response": {
+            "type": "function",
+            "value": "checkHelp"
+          }
+        }
+      }
+    ]
+  }
+}
