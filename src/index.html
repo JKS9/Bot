@@ -7,29 +7,17 @@
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
         <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-        <script type="text/javascript">
-            function clic() {
-                const setting = document.getElementById('setting');
-                const iconeMenu = document.getElementById('iconeMenu');
-                setting.classList.add("setting_clic");
-                iconeMenu.setAttribute("onclick", "removeclick()");
-            }
-            function removeclick() {
-                const setting = document.getElementById('setting');
-                const iconeMenu = document.getElementById('iconeMenu');
-                setting.classList.remove("setting_clic");
-                iconeMenu.setAttribute("onclick", "clic()");
-            }
-        </script>
     </head>
-    <body id="body">
+    <body id="body" class="white">
         <div id="app">
-            <div id="title_bot"></div>
+            <div id="title_bot">
+                <h1>My question, my bot</h1>
+            </div>
         </div>
         <div class="container">
             <div class="Editpadding">
-                <div id="litleMenu">
-                    <span id="iconeMenu" onclick="clic()">
+                <div id="litleMenu" class="whiteNavBar">
+                    <span id="iconeMenu" class="close">
                         <i class="fas fa-ellipsis-h"></i>
                     </span>
                 </div>
@@ -38,7 +26,7 @@
                     <div class="rectangle">
                         <p>Mode sombre</p>
                         <label class="switch">
-                            <input type="checkbox">
+                            <input type="checkbox" onclick="darkmode()" id="mode-dark" value="white" >
                             <span class="slider round"></span>
                         </label>
                     </div>
@@ -47,7 +35,7 @@
             <div class="columns">
                 <div class="column is-3 noPaddingRight">
                     <div class="content scrollNav">
-                        <ul id="botPicture">
+                        <ul id="botPicture" class="displayBotwhite">
                            <li>
                                 <figure class="image is-48x48">
                                     <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png">
@@ -82,14 +70,14 @@
                      </div>
                 </div>
                 <div class="column is-9 noPaddingLeft">
-                    <div class="backgroundCol">
+                    <div id="backgroundCol" class="backgroundChatwhite">
                         <div id="blockMessage">
                             <div class="Memessage">
                                 <figure class="image is-48x48">
                                     <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png">
                                 </figure>
                                 <p class="nameMe">Me</p>
-                                <p class="textMe">la météo sur Paris cette après midi ?</p>
+                                <p id="textME" class="textMe textMEWhite">la météo sur Paris cette après midi ?</p>
                                 <p class="Infomessage">08/11/2019 & 13H55</p>
                             </div>
                             <div class="Botmessage">
@@ -97,7 +85,7 @@
                                     <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png">
                                 </figure>
                                 <p class="namebot">Michel Smith</p>
-                                <p class="textBot">Il fera 5° sur paris dans l'après midi</p>
+                                <p id="TextBots" class="textBot textBotsWhite">Il fera 5° sur paris dans l'après midi</p>
                                 <p class="Infomessage">08/11/2019 & 13H56</p>
 
                             </div>
@@ -106,7 +94,7 @@
                                     <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png">
                                 </figure>
                                 <p class="nameMe">Me</p>
-                                <p class="textMe">Merci :)</p>
+                                <p id="textME" class="textMe textMEWhite">Merci :)</p>
                                 <p class="Infomessage">08/11/2019 & 13H56</p>
                             </div>
                             <div class="Botmessage">
@@ -114,7 +102,7 @@
                                     <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png">
                                 </figure>
                                 <p class="namebot">Michel Smith</p>
-                                <p class="textBot">N'hésite pas à me recontacter ;)</p>
+                                <p id="TextBots" class="textBot textBotsWhite">N'hésite pas à me recontacter ;)</p>
                                 <p class="Infomessage">08/11/2019 & 13H57</p>
                             </div>
                             <div class="Memessage">
@@ -122,7 +110,7 @@
                                     <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png">
                                 </figure>
                                 <p class="nameMe">Me</p>
-                                <p class="textMe">Merci :)</p>
+                                <p id="textME" class="textMe textMEWhite">Merci :)</p>
                                 <p class="Infomessage">08/11/2019 & 13H56</p>
                             </div>
                             <div class="Botmessage">
@@ -130,7 +118,7 @@
                                     <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png">
                                 </figure>
                                 <p class="namebot">Michel Smith</p>
-                                <p class="textBot">N'hésite pas à me recontacter ;)</p>
+                                <p id="TextBots" class="textBot textBotsWhite">N'hésite pas à me recontacter ;)</p>
                                 <p class="Infomessage">08/11/2019 & 13H57</p>
                             </div>
                             <div class="Memessage">
@@ -138,7 +126,7 @@
                                     <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png">
                                 </figure>
                                 <p class="nameMe">Me</p>
-                                <p class="textMe">Merci :)</p>
+                                <p id="textME" class="textMe textMEWhite">Merci :)</p>
                                 <p class="Infomessage">08/11/2019 & 13H56</p>
                             </div>
                             <div class="Botmessage">
@@ -146,7 +134,7 @@
                                     <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png">
                                 </figure>
                                 <p class="namebot">Michel Smith</p>
-                                <p class="textBot">N'hésite pas à me recontacter ;)</p>
+                                <p id="TextBots" class="textBot textBotsWhite">N'hésite pas à me recontacter ;)</p>
                                 <p class="Infomessage">08/11/2019 & 13H57</p>
                             </div>
                         </div>
@@ -166,8 +154,93 @@
             </div>
         </div>
     </body>
-    <script>
-    objDiv = document.getElementById("divExample");
+    <script type="text/javascript">
+            document.getElementById('iconeMenu').addEventListener("click", click);
+
+            function click() {
+                const element = document.querySelector("#iconeMenu");
+                if (element.classList.contains("close") == true){
+                    element.classList.add("open");
+                    if(element.classList.contains("close") == true){
+                        element.classList.remove("close");
+                    }
+
+                    const setting = document.getElementById('setting');
+                    const iconeMenu = document.getElementById('iconeMenu');
+                    setting.classList.add("setting_clic");
+                }else{
+                    element.classList.add("close");
+                    if(element.classList.contains("open") == true){
+                        element.classList.remove("open");
+                    }
+
+                    const setting = document.getElementById('setting');
+                    const iconeMenu = document.getElementById('iconeMenu');
+                    setting.classList.remove("setting_clic");
+                }
+                
+            }
+
+            function darkmode() {
+                const darkModeValue = document.getElementById('mode-dark').value;
+
+                if(darkModeValue === 'white'){
+
+                    document.getElementById('mode-dark').value = 'black';
+
+                    const backgroundBody = document.getElementById('body');
+                    backgroundBody.classList.add("dark");
+                    backgroundBody.classList.remove("white");
+
+                    const backgroundNavBar = document.getElementById('litleMenu');
+                    backgroundNavBar.classList.add("darkNavBar");
+                    backgroundNavBar.classList.remove("whiteNavBar");
+
+                    const displayBot  = document.getElementById('botPicture');
+                    displayBot.classList.add("displayBotdark");
+                    displayBot.classList.remove("displayBotwhite");
+
+                    const backgroundChat  = document.getElementById('backgroundCol');
+                    backgroundChat.classList.add("backgroundChatdark");
+                    backgroundChat.classList.remove("backgroundChatwhite");
+
+                    const backgroundTextMe  = document.getElementById('TextME');
+                    backgroundTextMe.classList.add("textMEDark");
+                    backgroundTextMe.classList.remove("textMEWhite");
+
+                    const backgroundTextBots  = document.getElementById('TextBots');
+                    backgroundTextBots.classList.add("textBotsDark");
+                    backgroundTextBots.classList.remove("textBotsWhite");
+                }else{
+                    document.getElementById('mode-dark').value = 'white';
+
+                    const backgroundBody = document.getElementById('body');
+                    backgroundBody.classList.add("white");
+                    backgroundBody.classList.remove("dark");
+
+                    const backgroundNavBar = document.getElementById('litleMenu');
+                    backgroundNavBar.classList.add("whiteNavBar");
+                    backgroundNavBar.classList.remove("darkNavBar");
+
+                    const displayBot  = document.getElementById('botPicture');
+                    displayBot.classList.add("displayBotwhite");
+                    displayBot.classList.remove("displayBotdark");
+
+                    const backgroundChat  = document.getElementById('backgroundCol');
+                    backgroundChat.classList.add("backgroundChatwhite");
+                    backgroundChat.classList.remove("backgroundChatdark");
+
+                    const backgroundTextMe  = document.getElementById('textME');
+                    backgroundTextMe.classList.add("TextMEWhite");
+                    backgroundTextMe.classList.remove("textMEDark");
+
+                    const backgroundTextBots  = document.getElementById('TextBots');
+                    backgroundTextBots.classList.add("textBotsWhite");
+                    backgroundTextBots.classList.remove("textBotsDark");
+                }
+            }
+
+    objDiv = document.getElementById("blockMessage");
     objDiv.scrollTop = objDiv.scrollHeight;
     </script>
 </html>

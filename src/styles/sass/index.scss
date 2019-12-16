@@ -2,28 +2,113 @@
 $colorWhite: #fff;
 $colorBlack: #000;
 $colorHover: #eaeaea;
-$colorBody : #2b8a80;
+
+$colorGreenBodyModeWhite : #2b8a80;
+$colorwhiteBodyModeWhite : #FFF;
+
+$colorBodyModeBlack : #797979;
+$colordarkNavbarblack : #404040;
 
 // variable fonts
 $fontJosefin : 'Josefin Sans', sans-serif;
 
-
-@mixin TextColor($color) {
-    color: $color;
-}
-
 body {
-    background-color: $colorBody;
     margin: 0;
     padding: 0;
     height: 100vh;
+}
+
+// dark mode
+.white {
+  background: $colorGreenBodyModeWhite;
+}
+.whiteNavBar {
+  background: $colorwhiteBodyModeWhite;
+}
+#botPicture {
+  list-style: none;
+  margin: 0px;
+}
+.displayBotwhite li {
+  height: 58px;
+  padding: 5px 0px 5px 5px;
+  background-color: $colorWhite;
+  border-radius: 5px;
+}
+.displayBotwhite li:hover {
+  background-color: $colorHover;
+  color: $colorBlack !important;
+}
+.displayBotwhite li figure {
+  float: left;
+  margin:0px;
+  margin-bottom: 0 !important;
+}
+.displayBotwhite li p {
+  float: left;
+  line-height: 48px;
+  width: 220px;
+  padding-left: 10px;
+  font-family: $fontJosefin;
+}
+.backgroundChatwhite {
+  background: $colorWhite;
+  color: $colorBlack;
+}
+.textMEWhite {
+  color: $colorBlack;
+  background:$colorGreenBodyModeWhite !important;
+}
+.textBotsWhite {
+  color: $colorBlack;
+  background:$colorHover;
+}
+
+
+
+.dark {
+  background: $colorBodyModeBlack;
+}
+.darkNavBar {
+  background: $colordarkNavbarblack;
+}
+.displayBotdark li {
+  height: 58px;
+  padding: 5px 0px 5px 5px;
+  border-radius: 5px;
+  background-color: $colordarkNavbarblack;
+  color: $colorWhite;
+
+}
+.displayBotdark li:hover {
+  background-color: $colorHover;
+  color: $colorBlack !important;
+}
+.displayBotdark li figure {
+  float: left;
+  margin:0px;
+  margin-bottom: 0!important;
+}
+.displayBotdark li p {
+  float: left;
+  line-height: 48px;
+  width: 220px;
+  padding-left: 10px;
+  font-family: $fontJosefin;
+}
+.backgroundChatdark {
+  background: $colordarkNavbarblack;
+}
+.textBotsDark {
+  color: $colorWhite;
+  background:$colorBodyModeBlack;
 }
 
 #title_bot {
   > h1 {
     padding: 10px 0px 0px 0px;
     font-family: $fontJosefin;
-    @include TextColor($colorWhite);
+    color: $colorWhite;
     text-align: center;
     font-weight: bold;
     font-size: 35px;
@@ -36,37 +121,11 @@ body {
   overflow: scroll;
   height: 495px;
 }
-#botPicture {
-  list-style: none;
-  margin: 0px;
-  > li {
-    height: 58px;
-    padding: 5px 0px 5px 5px;
-    background-color: $colorWhite;
-    border-radius: 5px;
-    > figure {
-      float: left;
-      margin:0px;
-    }
-    > p {
-      float: left;
-      line-height: 48px;
-      width: 220px;
-      padding-left: 10px;
-      font-family: $fontJosefin;
-      @include TextColor($colorBlack);
-    }
-  }
-  > li:hover {
-    background-color: $colorHover;
-  }
-}
 .Editpadding {
   width: 100%;
   padding: .75em 0em .5em 0em;
   #litleMenu {
     height: 58px;
-    background-color: $colorWhite;
     border-radius: 5px;
     padding: 5px 0px;
   }
@@ -78,7 +137,7 @@ body {
     cursor: pointer;
   }
   #iconeMenu:hover {
-    color: $colorBody;
+    color: $colorGreenBodyModeWhite;
   }
   #setting{
     display:none;
@@ -146,7 +205,7 @@ body {
       width: 26px;
       left: 4px;
       bottom: 4px;
-      background-color: $colorBody;
+      background-color: $colorGreenBodyModeWhite;
       -webkit-transition: .4s;
       transition: .4s;
     }
@@ -168,15 +227,14 @@ body {
 }
 .noPaddingLeft {
   padding: .75em .75em .75em .75em;
-  .backgroundCol {
-    width: 100%;
-    background-color: $colorWhite;
-    height: 41em;
-    border-radius: 5px;
-  }
+}
+#backgroundCol {
+  width: 100%;
+  height: 41em;
+  border-radius: 5px;
 }
 #blockMessage {
-  height: 580px;
+  height: 550px;
   overflow: scroll;
   .Memessage {
     width: 65%;
@@ -200,10 +258,8 @@ body {
       width: 85%;
       padding-right: 51px;
       font-family: "Josefin Sans", sans-serif;
-      color: $colorBlack;
       text-align: justify;
       font-size: 1.1em;
-      background:$colorBody;
       padding: 5px 15px;
       border-radius: 4px;
       color:$colorWhite;
@@ -241,10 +297,8 @@ body {
       width: 85%;
       padding-right: 51px;
       font-family: "Josefin Sans", sans-serif;
-      color: $colorBlack;
       text-align: justify;
       font-size: 1.1em;
-      background: $colorHover;
       padding: 5px 15px;
       border-radius: 4px;
       margin-top: 5px;
@@ -263,11 +317,10 @@ body {
 #formBot {
   .bar {
     padding: 3px 0px;
-    background: $colorBody;
+    background: $colorGreenBodyModeWhite;
   }
   .field {
     width: 90%;
     margin: 15px auto 10px auto;
   }
 }
-
