@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
         <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     </head>
-    <body id="body" class="white">
+    <body id="body" class="white" onload="SendMessage();">
         <div id="app">
             <div id="title_bot">
                 <h1>My question, my bot</h1>
@@ -77,55 +77,6 @@
                                     <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png">
                                 </figure>
                                 <p class="nameMe">Me</p>
-                                <p id="textME" class="textMe textMEWhite">la météo sur Paris cette après midi ?</p>
-                                <p class="Infomessage">08/11/2019 & 13H55</p>
-                            </div>
-                            <div class="Botmessage">
-                                <figure class="image is-48x48">
-                                    <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png">
-                                </figure>
-                                <p class="namebot">Michel Smith</p>
-                                <p id="TextBots" class="textBot textBotsWhite">Il fera 5° sur paris dans l'après midi</p>
-                                <p class="Infomessage">08/11/2019 & 13H56</p>
-
-                            </div>
-                            <div class="Memessage">
-                                <figure class="image is-48x48">
-                                    <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png">
-                                </figure>
-                                <p class="nameMe">Me</p>
-                                <p id="textME" class="textMe textMEWhite">Merci :)</p>
-                                <p class="Infomessage">08/11/2019 & 13H56</p>
-                            </div>
-                            <div class="Botmessage">
-                                <figure class="image is-48x48">
-                                    <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png">
-                                </figure>
-                                <p class="namebot">Michel Smith</p>
-                                <p id="TextBots" class="textBot textBotsWhite">N'hésite pas à me recontacter ;)</p>
-                                <p class="Infomessage">08/11/2019 & 13H57</p>
-                            </div>
-                            <div class="Memessage">
-                                <figure class="image is-48x48">
-                                    <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png">
-                                </figure>
-                                <p class="nameMe">Me</p>
-                                <p id="textME" class="textMe textMEWhite">Merci :)</p>
-                                <p class="Infomessage">08/11/2019 & 13H56</p>
-                            </div>
-                            <div class="Botmessage">
-                                <figure class="image is-48x48">
-                                    <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png">
-                                </figure>
-                                <p class="namebot">Michel Smith</p>
-                                <p id="TextBots" class="textBot textBotsWhite">N'hésite pas à me recontacter ;)</p>
-                                <p class="Infomessage">08/11/2019 & 13H57</p>
-                            </div>
-                            <div class="Memessage">
-                                <figure class="image is-48x48">
-                                    <img class="is-rounded" src="https://bulma.io/images/placeholders/96x96.png">
-                                </figure>
-                                <p class="nameMe">Me</p>
                                 <p id="textME" class="textMe textMEWhite">Merci :)</p>
                                 <p class="Infomessage">08/11/2019 & 13H56</p>
                             </div>
@@ -142,10 +93,10 @@
                             <div class=bar></div>
                             <div class="field is-grouped">
                                 <p class="control is-expanded">
-                                    <input class="input" type="text" placeholder="Send message">
+                                    <input class="input" type="text" id="Message" placeholder="Send message">
                                 </p>
                                 <p class="control">
-                                        <button class="button is-black">Send</button>
+                                    <span id="Action" class="button is-black">Send</span>
                                 </p>
                             </div>
                         </div>
@@ -156,6 +107,24 @@
     </body>
     <script type="text/javascript">
             document.getElementById('iconeMenu').addEventListener("click", click);
+
+            //var tab
+            var myTab = ["Banana", "Orange", "Apple", "Mango"];
+            function SendMessage()
+                {
+                var action = document.getElementById("Action");
+                action.onclick = MessageArray;
+            }
+
+            function MessageArray()
+                {
+                var mess = document.getElementById("Message").value;
+                var newTab = myTab.push(mess);
+                console.log(myTab);
+                //total message
+                //console.log(newTab);
+                alert("Message envoyé");
+            }
 
             function click() {
                 const element = document.querySelector("#iconeMenu");
