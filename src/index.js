@@ -7,5 +7,9 @@ import Bot from '../static/json-mock/bot/bot_command_fr.json';
 
 const chat = new Chat(MyConstants.user, Bot);
 
-chat.renderMe();
-chat.isBotCommandExist('salut');
+const message = document.getElementById('Message');
+
+document.getElementById('Action').addEventListener('click', () => {
+  chat.renderMe(message.value);
+  chat.isBotCommandExist(message.value);
+});

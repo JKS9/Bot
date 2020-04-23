@@ -39,12 +39,12 @@ class Chat {
     return isExist;
   }
 
-  renderMe() {
+  renderMe(message) {
     const elContacts = document.querySelector('#blockMessage');
     const item = {
       name: 'Me',
       avatar: 'https://bulma.io/images/placeholders/96x96.png',
-      msg: 'truuuc',
+      msg: message,
       date: f.function.date(),
     };
 
