@@ -106,25 +106,7 @@
         </div>
     </body>
     <script type="text/javascript">
-            document.getElementById('iconeMenu').addEventListener("click", click);
-
-            //var tab
-            var myTab = ["Banana", "Orange", "Apple", "Mango"];
-            function SendMessage()
-                {
-                var action = document.getElementById("Action");
-                action.onclick = MessageArray;
-            }
-
-            function MessageArray()
-                {
-                var mess = document.getElementById("Message").value;
-                var newTab = myTab.push(mess);
-                console.log(myTab);
-                //total message
-                //console.log(newTab);
-                alert("Message envoyé");
-            }
+   
 
             function click() {
                 const element = document.querySelector("#iconeMenu");
